@@ -1,0 +1,19 @@
+{
+  "description": "Los dos avisos del método. Se callan en carpetas sin un PLAN.md con \"Dónde quedamos\".",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          { "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/aviso-inicio.py\"", "timeout": 15 }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          { "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/aviso-orden.py\"", "timeout": 15 }
+        ]
+      }
+    ]
+  }
+}

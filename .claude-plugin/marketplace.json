@@ -1,0 +1,16 @@
+{
+  "name": "metodo",
+  "owner": {
+    "name": "Ezra"
+  },
+  "metadata": {
+    "description": "Una forma de trabajar con Claude Code por fases."
+  },
+  "plugins": [
+    {
+      "name": "metodo",
+      "source": "./",
+      "description": "El skill \"empezar\" y los dos avisos (orden e inicio) del método."
+    }
+  ]
+}

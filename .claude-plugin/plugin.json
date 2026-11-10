@@ -1,0 +1,5 @@
+{
+  "name": "metodo",
+  "description": "Una forma de trabajar con Claude Code por fases: el skill \"empezar\" y dos avisos (orden e inicio).",
+  "author": { "name": "Ezra" }
+}
