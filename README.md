@@ -28,7 +28,7 @@ Los cambios se ven al abrir una sesión nueva.
 ## Usar
 
 1. Crea una carpeta vacía y abre Claude Code ahí.
-2. Escribe `empezar`.
+2. Escribe `/metodo:empezar` (en el menú basta con `/empezar` para encontrarlo).
 3. En cada sesión siguiente, escribe `seguimos con el plan`.
 
 ## Tus reglas de conversación (opcional)

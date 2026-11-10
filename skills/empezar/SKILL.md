@@ -1,6 +1,7 @@
 ---
 name: empezar
-description: Arranca un proyecto nuevo con el método. Pregunta lo básico, copia las plantillas (PLAN.md, CLAUDE.md, docs/), escribe el contexto desde fuentes reales y elige el stack con research. Usar cuando el usuario diga "empezar", "empecemos un proyecto", "proyecto nuevo", "arranquemos con el método" o abra una carpeta vacía para algo nuevo. No usar si la carpeta ya tiene un PLAN.md con "Dónde quedamos": ahí se sigue con el plan.
+description: Arranca un proyecto nuevo con el método. Pregunta lo básico, copia las plantillas (PLAN.md, CLAUDE.md, docs/), escribe el contexto desde fuentes reales y elige el stack con research. Se activa solo con el comando /metodo:empezar. No usar si la carpeta ya tiene un PLAN.md con "Dónde quedamos", porque ahí se sigue con el plan.
+disable-model-invocation: true
 ---
 
 # Empezar un proyecto
