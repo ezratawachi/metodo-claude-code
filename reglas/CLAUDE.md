@@ -17,7 +17,7 @@ Vale para todos los proyectos. Lo de cada app va en el `CLAUDE.md` de su repo.
 ## Alcance
 
 - No te vayas a otros temas: anótalos en "para después".
-- No diseñes de más: primero lo simple, y se agregan cosas de a poco.
+- No diseñes de más: primero lo simple, y se agregan cosas de a poco (vale para lo que se construye; el plan sí va completo desde el inicio).
 - Habla en pasos y sesiones, nunca en "hoy / no hoy". Si algo es grande, pártelo en sub-tareas (4a, 4b) y di cuál hace esta sesión.
 - Nunca pongas algo en "para después" si yo no lo dije: posiblemente lo hacemos ahora. No supongas que quiero ir rápido; si
   quiero calidad o rapidez lo decido yo. Si algo te parece mala idea o muy grande, dilo una vez con razones y pregúntame dónde va.

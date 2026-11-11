@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Empezar un proyecto
 
-Deja una carpeta lista para trabajar con el método: plantillas copiadas, contexto escrito, stack elegido y un plan con la primera fase. Todo en una sesión, con las paradas marcadas abajo.
+Deja una carpeta lista para trabajar con el método: plantillas copiadas, contexto escrito, stack elegido y un plan con todas las fases. Todo en una sesión, con las paradas marcadas abajo.
 
 Las plantillas están en `../../plantillas/` y el método completo en `../../METODO.md` (las dos rutas se cuentan desde la carpeta de este skill). No leas `METODO.md` entero: solo la parte "Si es una web" si el proyecto es una web.
 
@@ -16,20 +16,22 @@ Mira la carpeta. Si ya hay un `PLAN.md` con "Dónde quedamos", para y dile al us
 
 ## Paso 1 — Lo básico
 
-Primero pide: "Cuéntame el proyecto como quieras." Con lo que cuente, repite lo entendido en una lista corta. Después pregunta de a una, con un ejemplo concreto y 2–3 opciones cuando ayude, solo lo que falte de estas 4:
+Primero pide: "Cuéntame el proyecto como quieras." Después pregunta de a una, con un ejemplo concreto y 2–3 opciones cuando ayude, solo lo que falte de estas 4:
 
-1. Nombre del proyecto. Si no hay, no frenes: usa uno provisional (por ejemplo, el de la carpeta), avisa que es provisional y deja "elegir el nombre" como tarea 1.1 del plan.
+1. Nombre del proyecto. Si no hay, no frenes: usa uno provisional (por ejemplo, el de la carpeta) y avisa que es provisional. "Definir el nombre" va como tarea de definir al inicio de la Fase 1, en orden.
 2. Para quién es y qué necesita, en una o dos frases suyas.
-3. De dónde sale el contexto real: redes, una web vieja, documentos, una charla con la persona.
+3. De dónde sale el contexto real: redes, una web vieja, documentos, una charla con la persona. Si una fuente no se puede leer (por ejemplo, pide iniciar sesión), ábrela en el navegador integrado; si tampoco se puede, pide al usuario que pegue el texto.
 4. Si es una web o es otra cosa.
 
-Repite las respuestas en una lista corta y espera el "sí" antes de seguir.
+Al final, una sola lista corta con todo lo entendido, y espera un "sí" claro. Si responde otra cosa, corrige la lista con eso y vuelve a pedir el sí.
 
 ## Paso 2 — Copiar las plantillas
 
-Copia el contenido de `../../plantillas/` a la raíz del proyecto, con la misma estructura (`PLAN.md`, `CLAUDE.md`, `docs/`). Pon el nombre del proyecto donde dice "(nombre del proyecto)" o "(Nombre del proyecto)". Los demás paréntesis se llenan en los pasos que siguen; los comentarios `<!-- -->` se quedan, porque explican cómo se usa cada archivo.
+Copia el contenido de `../../plantillas/` a la raíz del proyecto, con la misma estructura (`PLAN.md`, `CLAUDE.md`, `.gitignore`, `docs/`). Pon el nombre del proyecto donde dice "(nombre del proyecto)" o "(Nombre del proyecto)". Los demás paréntesis se llenan en los pasos que siguen; los comentarios `<!-- -->` se quedan, porque explican cómo se usa cada archivo.
 
 Al copiarlas, haz una sola pregunta: "¿git y repo privado en GitHub?". Los avisos automáticos miran las ramas y sin git no pueden. Con ese sí ya quedan aprobados el primer commit y subirlo al cierre. Si es solo git sin GitHub, en `CLAUDE.md` queda "GitHub: todavía no".
+
+Antes de crear el repo en GitHub, revisa `gh auth status` y que el nombre esté libre (`gh repo view <usuario>/<nombre>` tiene que fallar). Si no hay sesión, el usuario la inicia con `gh auth login`: Claude no pone contraseñas. Si el nombre está ocupado, pregunta cuál usar.
 
 ## Paso 3 — Contexto
 
@@ -38,10 +40,13 @@ Llena `docs/contexto.md` leyendo las fuentes del paso 1. Va antes del stack y de
 - Solo lo que diga la fuente. Las frases textuales van entre comillas.
 - Lo que no se sabe va en "**Falta**", con a quién preguntarle. No se inventa nada para llenar un título.
 - Arriba, la fuente y la fecha de la revisión.
+- Cada punto de "Falta" se vuelve una tarea de "definir X" en la fase donde se necesita. No se pregunta en este momento.
 
 Muéstrale al usuario un resumen corto y la lista de "Falta", y espera su OK.
 
 ## Paso 4 — Stack
+
+Si el proyecto no necesita stack (no hay código), dilo y salta este paso.
 
 Nada de "el de moda": se elige por lo que el proyecto necesita.
 
@@ -51,11 +56,11 @@ Nada de "el de moda": se elige por lo que el proyecto necesita.
 4. **Recomendación.** Una opción, con su razón en dos líneas. El usuario aprueba con "sí apruebas" o "no ahora".
 5. **Anotar.** La elegida va a la fila de `docs/decisiones.md` con su porqué y lo descartado, y a "Datos fijos" de `CLAUDE.md`.
 
-Si el usuario dice "no ahora", el research queda guardado y elegir el stack pasa a ser la tarea 1.1 del plan.
+Si el usuario dice "no ahora", el research queda guardado y "definir el stack" va como tarea de definir al inicio de la Fase 1, en orden.
 
 ## Paso 5 — Plan y cierre
 
-- `PLAN.md`: propón todas las fases, de inicio a entrega, con tareas numeradas, y espera el OK. Lo no definido va como tarea de "definir X" dentro de su fase, como el stack en el paso 4. Las fases lejanas pueden tener tareas gruesas que se parten al llegar. Si es una web, incluye las fases propias de `METODO.md`: identidad visual, R (revisión visual), S (seguridad) y publicar. "Para después" queda vacío, porque ahí solo entra lo que el usuario manda.
+- `PLAN.md`: propón todas las fases, de inicio a entrega, con tareas numeradas, y espera el OK. Lo no definido va como tarea de "definir X" dentro de su fase: el nombre y el stack si quedaron pendientes (al inicio de la Fase 1, en orden) y los puntos de "Falta" del paso 3. Las fases lejanas pueden tener tareas gruesas que se parten al llegar. Si es una web, incluye las fases propias de `METODO.md`: identidad visual, R (revisión visual) y publicar. Si el proyecto maneja datos de personas o dinero, sea web o no, incluye la Fase S (seguridad) antes de entregar. Todos los títulos de fase se escriben `## Fase X — nombre`, también `## Fase R — revisión visual` y `## Fase S — seguridad`, porque el aviso de orden solo reconoce ese formato. "Para después" queda vacío, porque ahí solo entra lo que el usuario manda.
 - "Dónde quedamos": qué se cerró en esta sesión, con fecha, y cuál es la próxima tarea.
 - `CLAUDE.md`: la línea de qué es y para quién, y las reglas propias que salgan del contexto (por ejemplo, lo que no se puede decir). Si no hay comandos todavía, la sección queda con su comentario.
 - GitHub: lo que se decidió en el paso 2, sin volver a preguntar. Si hay repo, va a "Datos fijos" de `CLAUDE.md`; si no, esa línea dice "GitHub: todavía no".

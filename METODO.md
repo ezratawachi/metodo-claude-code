@@ -22,7 +22,7 @@ Además hay secciones por tipo de proyecto. Hoy existe solo **"Si es una web"** 
    - Después research con fuentes y comparar 2–3 opciones con precios reales.
    - La elegida va a `docs/decisiones.md` con su porqué.
    - Lo mismo cada vez que entra una pieza nueva (correo, pagos…).
-3. **Plan.** `PLAN.md` con todas las fases, de inicio a entrega. Lo no definido va como tarea de "definir X" dentro de su fase, así siempre hay un siguiente paso. El plan es un mapa, no un contrato: fases y tareas se suman, mueven o parten en el camino, y las lejanas pueden tener tareas gruesas que se parten al llegar.
+3. **Plan.** `PLAN.md` con todas las fases, de inicio a entrega. Lo no definido va como tarea de "definir X" dentro de su fase, así siempre hay un siguiente paso. El plan es un mapa, no un contrato: fases y tareas se suman, mueven o parten en el camino, y las lejanas pueden tener tareas gruesas que se parten al llegar. Todos los títulos de fase se escriben `## Fase X — nombre` (también `## Fase R — revisión visual` y `## Fase S — seguridad`), porque el aviso de orden solo reconoce ese formato.
 4. **`CLAUDE.md` del proyecto.** Solo datos fijos, comandos y reglas propias. Máximo 5 KB. Las decisiones no van aquí.
 5. **Avisos automáticos.** Los dos hooks (ver "Las piezas") desde el primer día.
 
@@ -61,7 +61,7 @@ Los dos avisos generales son `hooks/aviso-orden.py` y `hooks/aviso-inicio.py` de
 ### Antes y después de entregar
 - **Antes:** todo lo creado al probar es de prueba y se borra junto.
 - **Después:** todo es real y no se borra nada sin el OK del usuario. Se anota en la memoria del proyecto el día que se entrega.
-- **Fase de seguridad obligatoria antes de entregar**, si el proyecto maneja datos de personas o dinero: un `SEGURIDAD.md` con su propia lista. Va al final, cuando el código ya no cambia.
+- **Fase S (seguridad) obligatoria antes de entregar** en cualquier proyecto que maneje datos de personas o dinero, sea web o no: un `SEGURIDAD.md` con su propia lista, y los skills security-review y security-and-hardening. Va al final, cuando el código ya no cambia.
 
 ---
 
@@ -95,7 +95,6 @@ Piezas que se sumaron con el mismo criterio:
 ### Fases propias de una web
 - **Identidad visual** al principio: 2–3 direcciones de prueba, elegir una (a veces gana una mezcla).
 - **R, revisión visual:** una pasada a todo con ojo de diseño antes de entregar.
-- **S, seguridad:** la del núcleo, con los skills security-review y security-and-hardening.
 - **Publicar:** dominio, Google (solo las páginas públicas) y una lista de "Al publicar".
 
 ---
