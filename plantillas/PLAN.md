@@ -1,6 +1,6 @@
 # Plan — (nombre del proyecto)
 
-Solo lo pendiente. "Seguimos con el plan" = la próxima tarea de "Dónde quedamos"; una sesión, una tarea.
+Solo lo pendiente. "Seguimos con el plan" = la próxima tarea de "Dónde quedamos"; una sesión, una tarea (o las sub-tareas que el usuario apruebe).
 El plan es un mapa, no un contrato: fases y tareas se suman, mueven o parten en el camino.
 Cómo se trabaja y los comandos: `CLAUDE.md`. Decisiones: `docs/decisiones.md`. Lo hecho: `docs/plan-hecho.md` y `docs/historial.md`.
 

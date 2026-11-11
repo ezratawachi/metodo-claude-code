@@ -5,6 +5,8 @@
 # No usa internet (no hace git fetch): mira lo que ya está en esta compu.
 import json, os, re, select, subprocess, sys
 
+PARTIR = 'Antes de confirmar la próxima tarea con el usuario, revisa si se parte (2.1a, 2.1b) y propón cuáles van en esta sesión.'
+
 
 def git(raiz, *args):
     try:
@@ -62,7 +64,7 @@ def main():
     d = donde_quedamos(raiz)
     if d is None:
         return 0  # no es un proyecto del método
-    partes = ['Dónde quedamos (PLAN.md):\n' + d] if d else []
+    partes = ['Dónde quedamos (PLAN.md):\n' + d + '\n\n' + PARTIR] if d else []
     a = fuera_de_principal(raiz)
     if a:
         partes.append('Trabajo fuera de la rama principal (avisar al usuario antes de empezar):\n' + '\n'.join('- ' + x for x in a))

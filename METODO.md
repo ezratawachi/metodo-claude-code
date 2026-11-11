@@ -27,8 +27,8 @@ Además hay secciones por tipo de proyecto. Hoy existe solo **"Si es una web"** 
 5. **Avisos automáticos.** Los dos hooks (ver "Las piezas") desde el primer día.
 
 ### Cada sesión
-- El usuario dice **"seguimos con el plan"**. Claude lee "Dónde quedamos" y hace **solo la próxima tarea**: una sesión, una tarea.
-- Si una tarea es grande, se parte (4a, 4b) y se dice cuál toca en esta sesión.
+- El usuario dice **"seguimos con el plan"**. Claude lee "Dónde quedamos" y hace **solo la próxima tarea**: una sesión, una tarea (o las sub-tareas que el usuario apruebe).
+- **Partir una tarea:** al abrirla, antes de confirmarla con el usuario, Claude revisa si se parte (2.1a, 2.1b) y propone cuáles van en esta sesión. Se parte cuando hay una decisión del usuario en medio o partes que se cierran solas (un research, una pantalla). Si a la mitad crece, se para y se parte ahí. Una tarea puede nacer entera porque al planear no se sabe qué tiene adentro.
 - Toda decisión de diseño pasa primero por un research con fuentes y una recomendación. El usuario aprueba diciendo "sí" y "no ahora".
 
 ### Al cerrar una tarea
@@ -93,7 +93,7 @@ Piezas que se sumaron con el mismo criterio:
 | `.claude/launch.json` | El servidor local, para probar en el navegador integrado | Desde el primer código |
 
 ### Fases propias de una web
-- **Identidad visual** al principio: 2–3 direcciones de prueba, elegir una (a veces gana una mezcla).
+- **Identidad visual** al principio, ya partida en tres tareas: research, armar 2–3 direcciones de prueba y elegir una (a veces gana una mezcla).
 - **R, revisión visual:** una pasada a todo con ojo de diseño antes de entregar.
 - **Publicar:** dominio, Google (solo las páginas públicas) y una lista de "Al publicar".
 
