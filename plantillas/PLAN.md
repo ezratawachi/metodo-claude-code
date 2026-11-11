@@ -1,6 +1,7 @@
 # Plan — (nombre del proyecto)
 
 Solo lo pendiente. "Seguimos con el plan" = la próxima tarea de "Dónde quedamos"; una sesión, una tarea.
+El plan es un mapa, no un contrato: fases y tareas se suman, mueven o parten en el camino.
 Cómo se trabaja y los comandos: `CLAUDE.md`. Decisiones: `docs/decisiones.md`. Lo hecho: `docs/plan-hecho.md` y `docs/historial.md`.
 
 ## Dónde quedamos
@@ -9,7 +10,8 @@ Cómo se trabaja y los comandos: `CLAUDE.md`. Decisiones: `docs/decisiones.md`. 
 - Sigue la 1.1.
 
 ## Fase 1 — (nombre de la fase)
-<!-- Una fase entra cuando se ve clara; no hace falta planear todo el primer día.
+<!-- Desde el día 1 están todas las fases, de inicio a entrega. Lo no definido va como tarea de "definir X" dentro de su fase.
+     Las fases lejanas pueden tener tareas gruesas que se parten al llegar.
      Tareas numeradas. Si una es grande, se parte (1.2a, 1.2b).
      Al cerrar una tarea queda en UNA línea con la fecha: - [x] 1.1 (qué) (AAAA-MM-DD)
      Al cerrar la fase, sus líneas pasan a docs/plan-hecho.md. -->

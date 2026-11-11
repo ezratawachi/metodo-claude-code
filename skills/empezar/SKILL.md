@@ -55,7 +55,7 @@ Si el usuario dice "no ahora", el research queda guardado y elegir el stack pasa
 
 ## Paso 5 — Plan y cierre
 
-- `PLAN.md`: propón la Fase 1 con pocas tareas numeradas y espera el OK. Solo las fases que se ven claras; "Para después" queda vacío, porque ahí solo entra lo que el usuario manda.
+- `PLAN.md`: propón todas las fases, de inicio a entrega, con tareas numeradas, y espera el OK. Lo no definido va como tarea de "definir X" dentro de su fase, como el stack en el paso 4. Las fases lejanas pueden tener tareas gruesas que se parten al llegar. Si es una web, incluye las fases propias de `METODO.md`: identidad visual, R (revisión visual), S (seguridad) y publicar. "Para después" queda vacío, porque ahí solo entra lo que el usuario manda.
 - "Dónde quedamos": qué se cerró en esta sesión, con fecha, y cuál es la próxima tarea.
 - `CLAUDE.md`: la línea de qué es y para quién, y las reglas propias que salgan del contexto (por ejemplo, lo que no se puede decir). Si no hay comandos todavía, la sección queda con su comentario.
 - GitHub: pregunta si se crea un repo. Si sí, va a "Datos fijos" de `CLAUDE.md`; si no, esa línea dice "GitHub: todavía no".

@@ -22,7 +22,7 @@ Además hay secciones por tipo de proyecto. Hoy existe solo **"Si es una web"** 
    - Después research con fuentes y comparar 2–3 opciones con precios reales.
    - La elegida va a `docs/decisiones.md` con su porqué.
    - Lo mismo cada vez que entra una pieza nueva (correo, pagos…).
-3. **Plan.** `PLAN.md` con las primeras fases. Cada fase entra cuando se ve clara: no hace falta planear todo el primer día.
+3. **Plan.** `PLAN.md` con todas las fases, de inicio a entrega. Lo no definido va como tarea de "definir X" dentro de su fase, así siempre hay un siguiente paso. El plan es un mapa, no un contrato: fases y tareas se suman, mueven o parten en el camino, y las lejanas pueden tener tareas gruesas que se parten al llegar.
 4. **`CLAUDE.md` del proyecto.** Solo datos fijos, comandos y reglas propias. Máximo 5 KB. Las decisiones no van aquí.
 5. **Avisos automáticos.** Los dos hooks (ver "Las piezas") desde el primer día.
 
